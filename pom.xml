@@ -8,4 +8,15 @@
     <artifactId>music-note</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <name>Alexander Bakhin</name>
+            <email>bakhin.alexander@gmail.com</email>
+            <roles>
+                <role>developer</role>
+                <role>tester</role>
+            </roles>
+        </developer>
+    </developers>
+
 </project>
