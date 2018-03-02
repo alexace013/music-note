@@ -10,7 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-public class EntryRegister implements Serializable {
+public class EntryDTO implements Serializable {
 
     private static final long SERIAL_VERSION_UID = UUID.randomUUID()
             .getMostSignificantBits() & Long.MAX_VALUE;
@@ -18,10 +18,10 @@ public class EntryRegister implements Serializable {
     private String track;
     private String genre;
 
-    public EntryRegister() {
+    public EntryDTO() {
     }
 
-    public EntryRegister(String author, String track, String genre) {
+    public EntryDTO(String author, String track, String genre) {
         this.author = author;
         this.track = track;
         this.genre = genre;
