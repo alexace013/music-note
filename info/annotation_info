@@ -1,0 +1,6 @@
+This steps must fix problems with lombok annotations:
+
+Settings->
+            Compiler->
+                        Annotation Processors->
+                                                click checkbox 'Enable annotation processing'
