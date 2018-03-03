@@ -1,5 +1,6 @@
 package common;
 
+import common.dto.EntryDTO;
 import logger.Log4JWrapper;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;

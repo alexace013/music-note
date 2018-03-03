@@ -1,4 +1,4 @@
-package common;
+package common.dto;
 
 import lombok.Getter;
 import lombok.Setter;
