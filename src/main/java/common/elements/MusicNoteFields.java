@@ -4,14 +4,15 @@ import lombok.Getter;
 
 @Getter
 public enum MusicNoteFields {
+
     AUTHOR("author"),
     TRACK("track"),
     GENRE("genre");
 
-    private String param;
+    private String fieldName;
 
-    MusicNoteFields(final String param) {
-        this.param = param;
+    MusicNoteFields(final String fieldName) {
+        this.fieldName = fieldName;
     }
 
 }

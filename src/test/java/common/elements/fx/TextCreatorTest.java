@@ -9,11 +9,11 @@ public class TextCreatorTest {
     @Test
     public void textCreatorTest() {
         SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(MusicNoteFields.AUTHOR.getParam() + TextCreator.TEXT_CHAR)
+        softly.assertThat(MusicNoteFields.AUTHOR.getFieldName() + TextCreator.TEXT_CHAR)
                 .contains(TextCreator.getAuthorText().getText());
-        softly.assertThat(MusicNoteFields.TRACK.getParam() + TextCreator.TEXT_CHAR)
+        softly.assertThat(MusicNoteFields.TRACK.getFieldName() + TextCreator.TEXT_CHAR)
                 .contains(TextCreator.getTrackText().getText());
-        softly.assertThat(MusicNoteFields.GENRE.getParam() + TextCreator.TEXT_CHAR)
+        softly.assertThat(MusicNoteFields.GENRE.getFieldName() + TextCreator.TEXT_CHAR)
                 .contains(TextCreator.getGenreText().getText());
         softly.assertAll();
     }

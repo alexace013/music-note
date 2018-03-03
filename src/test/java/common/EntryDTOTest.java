@@ -25,11 +25,11 @@ public class EntryDTOTest {
     @Test
     public void testSetEntryDTO() {
         Log4JWrapper.info(TestCounterUtil.getInfo());
-        final EntryDTO entryRegister = new EntryDTO();
-        entryRegister.setAuthor(AUTHOR_TEXT);
-        entryRegister.setTrack(TRACK_TEXT);
-        entryRegister.setGenre(GENRE_TEXT);
-        final String actualEntryDtoText = entryRegister.toString();
+        final EntryDTO entryDTO = new EntryDTO();
+        entryDTO.setAuthor(AUTHOR_TEXT);
+        entryDTO.setTrack(TRACK_TEXT);
+        entryDTO.setGenre(GENRE_TEXT);
+        final String actualEntryDtoText = entryDTO.toString();
         Log4JWrapper.debug(actualEntryDtoText);
         Assert.assertEquals("Entry DTO has wrong text",
                 EXPECTED_ENTRY_DTO_TEXT, actualEntryDtoText);
