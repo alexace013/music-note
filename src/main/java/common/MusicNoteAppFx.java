@@ -8,6 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import common.elements.MusicNoteFields;
+import common.elements.MusicNoteButtonsTitles;
 import logger.Log4JWrapper;
 
 import static java.lang.String.format;
@@ -17,6 +18,9 @@ import static common.elements.fx.TextCreator.getGenreText;
 import static common.elements.fx.TextFieldCreator.getAuthorTextField;
 import static common.elements.fx.TextFieldCreator.getTrackTextField;
 import static common.elements.fx.TextFieldCreator.getGenreTextField;
+import static common.elements.fx.ButtonCreator.getAddButton;
+import static common.elements.fx.ButtonCreator.getClearButton;
+import static common.elements.fx.ButtonCreator.getShowButton;
 import static logger.Log4JWrapper.debug;
 
 public class MusicNoteAppFx extends Application {
@@ -24,6 +28,7 @@ public class MusicNoteAppFx extends Application {
     private GridPane gridPane;
     private HBox hBox;
     private static final String DEBUG_FOR_ADD_TEXT_ELEMENT = "created %s text element";
+    private static final String DEBUG_FOR_ADD_BUTTON_ELEMENT = "created %s button element";
 
     public static void main(String[] args) {
         launch(args);
@@ -41,9 +46,16 @@ public class MusicNoteAppFx extends Application {
         gridPane.add(getGenreText(), 0, 2);
         debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.GENRE.getFieldName()));
         gridPane.add(getAuthorTextField(), 1, 0);
+        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.AUTHOR.getFieldName()));
         gridPane.add(getTrackTextField(), 1, 1);
         gridPane.add(getGenreTextField(), 1, 2);
         setHBox();
+        hBox.getChildren().add(getAddButton());
+        debug(format(DEBUG_FOR_ADD_BUTTON_ELEMENT, MusicNoteButtonsTitles.ADD.toString()));
+        hBox.getChildren().add(getShowButton());
+        debug(format(DEBUG_FOR_ADD_BUTTON_ELEMENT, MusicNoteButtonsTitles.SHOW_ALL.toString()));
+        hBox.getChildren().add(getClearButton());
+        debug(format(DEBUG_FOR_ADD_BUTTON_ELEMENT, MusicNoteButtonsTitles.CLEAR.toString()));
         gridPane.add(hBox, 1, 4);
         stage.setScene(createScene(gridPane));
         stage.show();

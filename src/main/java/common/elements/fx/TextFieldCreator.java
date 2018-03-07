@@ -15,21 +15,21 @@ public class TextFieldCreator extends FxTextElementAttributes {
 
     public static TextField getAuthorTextField() {
         final TextField author = new TextField(DEFAULT_TEXT + AUTHOR.getFieldName());
-        author.setFont(font(DEFAULT_FONT_STYLE, NORMAL, FONT_SIZE));
+        author.setFont(font(DEFAULT_FONT_STYLE, NORMAL, DEFAULT_FONT_SIZE));
         debug(author.toString());
         return author;
     }
 
     public static TextField getTrackTextField() {
         final TextField track = new TextField(DEFAULT_TEXT + TRACK.getFieldName());
-        track.setFont(font(DEFAULT_FONT_STYLE, NORMAL, FONT_SIZE));
+        track.setFont(font(DEFAULT_FONT_STYLE, NORMAL, DEFAULT_FONT_SIZE));
         debug(track.toString());
         return track;
     }
 
     public static TextField getGenreTextField() {
         final TextField genre = new TextField(DEFAULT_TEXT + GENRE.getFieldName());
-        genre.setFont(font(DEFAULT_FONT_STYLE, NORMAL, FONT_SIZE));
+        genre.setFont(font(DEFAULT_FONT_STYLE, NORMAL, DEFAULT_FONT_SIZE));
         debug(genre.toString());
         return genre;
     }
