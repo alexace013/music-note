@@ -1,12 +1,13 @@
 package common.elements.fx;
 
+import common.elements.attributes.FxButtonElementAttributes;
 import javafx.scene.control.Button;
 
 import static javafx.scene.text.Font.font;
 import static logger.Log4JWrapper.debug;
-import static common.elements.MusicNoteButtonsTitles.CLEAR;
-import static common.elements.MusicNoteButtonsTitles.SHOW_ALL;
-import static common.elements.MusicNoteButtonsTitles.ADD;
+import static common.elements.titles.MusicNoteButtonsTitles.CLEAR;
+import static common.elements.titles.MusicNoteButtonsTitles.SHOW_ALL;
+import static common.elements.titles.MusicNoteButtonsTitles.ADD;
 
 public class ButtonCreator extends FxButtonElementAttributes {
 

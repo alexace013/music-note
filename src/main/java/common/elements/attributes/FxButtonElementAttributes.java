@@ -1,4 +1,4 @@
-package common.elements.fx;
+package common.elements.attributes;
 
 public abstract class FxButtonElementAttributes {
 

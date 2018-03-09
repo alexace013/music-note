@@ -5,10 +5,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import common.elements.MusicNoteFields;
-import common.elements.MusicNoteButtonsTitles;
+import common.elements.titles.MusicNoteFieldsTitles;
+import common.elements.titles.MusicNoteButtonsTitles;
 import logger.Log4JWrapper;
 
 import static java.lang.String.format;
@@ -40,13 +39,13 @@ public class MusicNoteAppFx extends Application {
         Log4JWrapper.info(stage.getTitle());
         setGridPane();
         gridPane.add(getAuthorText(), 0, 0);
-        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.AUTHOR.getFieldName()));
+        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFieldsTitles.AUTHOR.getFieldName()));
         gridPane.add(getTrackText(), 0, 1);
-        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.TRACK.getFieldName()));
+        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFieldsTitles.TRACK.getFieldName()));
         gridPane.add(getGenreText(), 0, 2);
-        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.GENRE.getFieldName()));
+        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFieldsTitles.GENRE.getFieldName()));
         gridPane.add(getAuthorTextField(), 1, 0);
-        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.AUTHOR.getFieldName()));
+        debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFieldsTitles.AUTHOR.getFieldName()));
         gridPane.add(getTrackTextField(), 1, 1);
         gridPane.add(getGenreTextField(), 1, 2);
         gridPane.add(getAddButton(), 1, 4);
@@ -82,7 +81,7 @@ public class MusicNoteAppFx extends Application {
 
     private Scene createScene(final GridPane gridPane) {
         debug("==========\npre configure Scene is started...");
-        final double sceneWidth = 550.0d;
+        final double sceneWidth = 750.0d;
         debug(format("scene width: %d", (long) sceneWidth));
         final double sceneHeight = 280.0d;
         debug(format("scene height: %d", (long) sceneWidth));

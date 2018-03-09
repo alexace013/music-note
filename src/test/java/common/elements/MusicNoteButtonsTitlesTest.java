@@ -2,15 +2,17 @@ package common.elements;
 
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Test;
+import utils.TestCounterUtil;
 
 import java.util.Optional;
 
 import static java.lang.String.format;
-import static common.elements.MusicNoteButtonsTitles.ADD;
-import static common.elements.MusicNoteButtonsTitles.CLEAR;
-import static common.elements.MusicNoteButtonsTitles.SHOW_ALL;
+import static common.elements.titles.MusicNoteButtonsTitles.ADD;
+import static common.elements.titles.MusicNoteButtonsTitles.CLEAR;
+import static common.elements.titles.MusicNoteButtonsTitles.SHOW_ALL;
+import static logger.Log4JWrapper.info;
 // TODO[ADD BUTTON] import SAVE button
-//import static common.elements.MusicNoteButtonsTitles.SAVE;
+//import static common.elements.titles.MusicNoteButtonsTitles.SAVE;
 
 public class MusicNoteButtonsTitlesTest {
 
@@ -25,6 +27,7 @@ public class MusicNoteButtonsTitlesTest {
 
     @Test
     public void checkButtonsTitlesTextsPositive() {
+        info(TestCounterUtil.getInfo());
         SoftAssertions softly = new SoftAssertions();
         softly.assertThat(ADD.getButtonTitleText())
                 .as(format(DESCRIPTION_TEXT, ADD.toString()))

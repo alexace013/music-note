@@ -1,33 +1,34 @@
 package common.elements.fx;
 
 import javafx.scene.text.Text;
-import logger.Log4JWrapper;
+import common.elements.attributes.FxTextElementAttributes;
 
 import static javafx.scene.text.Font.font;
-import static common.elements.MusicNoteFields.AUTHOR;
-import static common.elements.MusicNoteFields.TRACK;
-import static common.elements.MusicNoteFields.GENRE;
+import static common.elements.titles.MusicNoteFieldsTitles.AUTHOR;
+import static common.elements.titles.MusicNoteFieldsTitles.TRACK;
+import static common.elements.titles.MusicNoteFieldsTitles.GENRE;
+import static logger.Log4JWrapper.debug;
 
 public final class TextCreator extends FxTextElementAttributes {
 
     public static Text getAuthorText() {
         final Text author = new Text(AUTHOR.getFieldName() + TEXT_CHAR);
         author.setFont(font(DEFAULT_FONT_STYLE, FONT_WEIGHT, DEFAULT_FONT_SIZE));
-        Log4JWrapper.debug(author.toString());
+        debug(author.toString());
         return author;
     }
 
     public static Text getTrackText() {
         final Text track = new Text(TRACK.getFieldName() + TEXT_CHAR);
         track.setFont(font(DEFAULT_FONT_STYLE, FONT_WEIGHT, DEFAULT_FONT_SIZE));
-        Log4JWrapper.debug(track.toString());
+        debug(track.toString());
         return track;
     }
 
     public static Text getGenreText() {
         final Text genre = new Text(GENRE.getFieldName() + TEXT_CHAR);
         genre.setFont(font(DEFAULT_FONT_STYLE, FONT_WEIGHT, DEFAULT_FONT_SIZE));
-        Log4JWrapper.debug(genre.toString());
+        debug(genre.toString());
         return genre;
     }
 

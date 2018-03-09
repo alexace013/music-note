@@ -1,4 +1,4 @@
-package common.elements;
+package common.elements.titles;
 
 import lombok.Getter;
 

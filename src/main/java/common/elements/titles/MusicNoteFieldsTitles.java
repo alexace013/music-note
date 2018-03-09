@@ -1,9 +1,9 @@
-package common.elements;
+package common.elements.titles;
 
 import lombok.Getter;
 
 @Getter
-public enum MusicNoteFields {
+public enum MusicNoteFieldsTitles {
 
     AUTHOR("author"),
     TRACK("track"),
@@ -11,7 +11,7 @@ public enum MusicNoteFields {
 
     private String fieldName;
 
-    MusicNoteFields(final String fieldName) {
+    MusicNoteFieldsTitles(final String fieldName) {
         this.fieldName = fieldName;
     }
 

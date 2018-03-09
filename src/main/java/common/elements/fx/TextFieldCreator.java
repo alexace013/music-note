@@ -1,11 +1,12 @@
 package common.elements.fx;
 
 import javafx.scene.control.TextField;
+import common.elements.attributes.FxTextElementAttributes;
 
 import static javafx.scene.text.Font.font;
-import static common.elements.MusicNoteFields.AUTHOR;
-import static common.elements.MusicNoteFields.GENRE;
-import static common.elements.MusicNoteFields.TRACK;
+import static common.elements.titles.MusicNoteFieldsTitles.AUTHOR;
+import static common.elements.titles.MusicNoteFieldsTitles.GENRE;
+import static common.elements.titles.MusicNoteFieldsTitles.TRACK;
 import static logger.Log4JWrapper.debug;
 
 public final class TextFieldCreator extends FxTextElementAttributes {

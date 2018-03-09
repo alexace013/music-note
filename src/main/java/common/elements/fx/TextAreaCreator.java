@@ -2,11 +2,12 @@ package common.elements.fx;
 
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Font;
+import common.elements.attributes.FxTextElementAttributes;
 
 import static javafx.scene.text.FontWeight.NORMAL;
 import static logger.Log4JWrapper.debug;
 
-public final class TextAreaCreator extends FxTextAreaElementAttributes {
+public final class TextAreaCreator extends FxTextElementAttributes {
 
     public static TextArea getTextArea() {
         final TextArea textArea = new TextArea();
