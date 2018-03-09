@@ -21,12 +21,12 @@ import static common.elements.fx.TextFieldCreator.getGenreTextField;
 import static common.elements.fx.ButtonCreator.getAddButton;
 import static common.elements.fx.ButtonCreator.getClearButton;
 import static common.elements.fx.ButtonCreator.getShowButton;
+import static common.elements.fx.TextAreaCreator.getTextArea;
 import static logger.Log4JWrapper.debug;
 
 public class MusicNoteAppFx extends Application {
 
     private GridPane gridPane;
-    private HBox hBox;
     private static final String DEBUG_FOR_ADD_TEXT_ELEMENT = "created %s text element";
     private static final String DEBUG_FOR_ADD_BUTTON_ELEMENT = "created %s button element";
 
@@ -49,14 +49,13 @@ public class MusicNoteAppFx extends Application {
         debug(format(DEBUG_FOR_ADD_TEXT_ELEMENT, MusicNoteFields.AUTHOR.getFieldName()));
         gridPane.add(getTrackTextField(), 1, 1);
         gridPane.add(getGenreTextField(), 1, 2);
-        setHBox();
-        hBox.getChildren().add(getAddButton());
+        gridPane.add(getAddButton(), 1, 4);
         debug(format(DEBUG_FOR_ADD_BUTTON_ELEMENT, MusicNoteButtonsTitles.ADD.toString()));
-        hBox.getChildren().add(getShowButton());
+        gridPane.add(getShowButton(), 1, 5);
         debug(format(DEBUG_FOR_ADD_BUTTON_ELEMENT, MusicNoteButtonsTitles.SHOW_ALL.toString()));
-        hBox.getChildren().add(getClearButton());
+        gridPane.add(getClearButton(), 1, 6);
         debug(format(DEBUG_FOR_ADD_BUTTON_ELEMENT, MusicNoteButtonsTitles.CLEAR.toString()));
-        gridPane.add(hBox, 1, 4);
+        gridPane.add(getTextArea(), 2, 0, 1, 10);
         stage.setScene(createScene(gridPane));
         stage.show();
     }
@@ -83,21 +82,12 @@ public class MusicNoteAppFx extends Application {
 
     private Scene createScene(final GridPane gridPane) {
         debug("==========\npre configure Scene is started...");
-        final double sceneWidth = 350.0d;
+        final double sceneWidth = 550.0d;
         debug(format("scene width: %d", (long) sceneWidth));
-        final double sceneHeight = 360.0d;
+        final double sceneHeight = 280.0d;
         debug(format("scene height: %d", (long) sceneWidth));
         debug("new Scene start created\n==========");
         return new Scene(gridPane, sceneWidth, sceneHeight);
-    }
-
-    private void setHBox() {
-        final double spacingValue = 10.0d;
-        hBox = new HBox(spacingValue);
-        debug(format("==========\ncreated new HBox with spacing value = %d " +
-                "and start configure...", (long) spacingValue));
-        final Pos pos = Pos.BOTTOM_LEFT;
-        hBox.setAlignment(pos);
     }
 
 }
