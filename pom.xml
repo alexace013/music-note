@@ -20,7 +20,6 @@
     </developers>
 
     <dependencies>
-
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>javafx</artifactId>
@@ -28,80 +27,68 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/jfxrt.jar</systemPath>
         </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.25</version>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.0.2</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.0.2</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
             <version>4.12.2</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
             <version>1.0.2</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-runner</artifactId>
             <version>1.0.2</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>3.8.0</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
-
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -110,9 +97,17 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            
         </plugins>
-
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>surefire-report-maven-plugin</artifactId>
+                <version>2.0-beta-1</version>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>

@@ -1,0 +1,4 @@
+Run maven commands:
+1. mvn clean test
+2. mvn surefire-report:report
+3. find report into directory/target/site/surefire-report.html
