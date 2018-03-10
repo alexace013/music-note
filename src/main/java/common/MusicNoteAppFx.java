@@ -84,7 +84,7 @@ public class MusicNoteAppFx extends Application {
         final double sceneWidth = 750.0d;
         debug(format("scene width: %d", (long) sceneWidth));
         final double sceneHeight = 280.0d;
-        debug(format("scene height: %d", (long) sceneWidth));
+        debug(format("scene height: %d", (long) sceneHeight));
         debug("new Scene start created\n==========");
         return new Scene(gridPane, sceneWidth, sceneHeight);
     }
